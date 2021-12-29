@@ -1,0 +1,7 @@
+.main {
+  width: 100%;
+  background-color: var(--white);
+  box-sizing: border-box;
+  border-radius: 1.6rem 1.6rem 0 0;
+  padding: 2rem;
+}

@@ -1,0 +1,48 @@
+.container {
+  margin: 1rem 0;
+}
+
+.container p {
+  margin: 0;
+  font-family: var(--font);
+  font-size: var(--font-small);
+  color: var(--dark-bg);
+  font-weight: 700;
+}
+
+.tip-container {
+  width: 100%;
+  margin: 1rem 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.custom-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.is-hidden {
+  display: none;
+}
+
+.custom {
+  width: 100%;
+  padding: 0.5rem 0.8rem;
+  border-radius: 0.5rem;
+  border: none;
+  background-color: var(--light-color2);
+  font-size: 5vw;
+  font-family: var(--font);
+  font-weight: 700;
+  color: var(--dark-bg);
+  letter-spacing: 1px;
+  outline-color: var(--main-bg);
+  caret-color: var(--main-bg);
+}
