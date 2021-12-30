@@ -1,16 +1,21 @@
-import react from 'react';
+import react from "react";
 
-import styles from '../Styles/Input.module.css';
+import styles from "../Styles/Input.module.css";
 
 const Input = (props) => {
   return (
-    <section className={styles['amount-container']}>
-      <label className={styles['amount-title']} htmlFor={props.name}>
+    <section className={styles["amount-container"]}>
+      <label className={styles["amount-title"]} htmlFor={props.name}>
         {props.label}
       </label>
-      <div className={styles['input-container']}>
+      <div className={styles["input-container"]}>
         {props.children}
-        <input dir="rtl" name={props.name} type="number" />
+        <input
+          onChange={props.inputHandler}
+          dir="rtl"
+          name={props.name}
+          type="number"
+        />
       </div>
     </section>
   );

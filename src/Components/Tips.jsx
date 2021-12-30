@@ -1,25 +1,55 @@
-import react from 'react';
+import react from "react";
 
-import styles from './Styles/Tips.module.css';
-import Tip from './UI/Tip';
+import styles from "./Styles/Tips.module.css";
+import Tip from "./UI/Tip";
 
-const Tips = () => {
+const Tips = (props) => {
   const uncheckHandler = () => {
-    const radio = document.querySelector('input[type=radio]:checked');
-    radio.checked = false;
+    const radio = document.querySelector("input[type=radio]:checked");
+    if (radio === null) {
+      console.log("no check");
+    } else {
+      radio.checked = false;
+    }
   };
 
   return (
     <section className={styles.container}>
       <p>Select Tip %</p>
-      <div className={styles['tip-container']}>
-        <Tip value={5} amount="5%" id="radio1" />
-        <Tip value={10} amount="10%" id="radio2" />
-        <Tip value={15} amount="15%" id="radio3" />
-        <Tip value={20} amount="20%" id="radio4" />
-        <Tip value={25} amount="25%" id="radio5" />
-        <div onClick={uncheckHandler} className={styles['custom-container']}>
+      <div className={styles["tip-container"]}>
+        <Tip
+          inputHandler={props.inputHandler}
+          value={5}
+          amount="5%"
+          id="radio1"
+        />
+        <Tip
+          inputHandler={props.inputHandler}
+          value={10}
+          amount="10%"
+          id="radio2"
+        />
+        <Tip
+          inputHandler={props.inputHandler}
+          value={15}
+          amount="15%"
+          id="radio3"
+        />
+        <Tip
+          inputHandler={props.inputHandler}
+          value={20}
+          amount="20%"
+          id="radio4"
+        />
+        <Tip
+          inputHandler={props.inputHandler}
+          value={25}
+          amount="25%"
+          id="radio5"
+        />
+        <div onClick={uncheckHandler} className={styles["custom-container"]}>
           <input
+            onChange={props.inputHandler}
             name="tip-amount"
             dir="rtl"
             className={styles.custom}
