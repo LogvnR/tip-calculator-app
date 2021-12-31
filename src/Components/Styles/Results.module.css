@@ -28,6 +28,7 @@
   margin: 0;
   font-size: var(--font-medium);
   color: var(--light-color1);
+  font-weight: 700;
 }
 
 .per-person {
@@ -46,6 +47,7 @@
   margin: 0;
   font-size: clamp(24px, 8vw, 48px);
   color: var(--main-bg);
+  font-weight: 700;
 }
 
 .btn-container {
@@ -69,8 +71,8 @@
   background-color: var(--main-bg);
 }
 
-.btn:hover {
-  transition: all 0.25s ease-in-out;
+.btn:active {
+  transition: all 0.15s ease-in-out;
   background-color: var(--light-color1);
 }
 
@@ -79,5 +81,10 @@
     justify-content: space-between;
     padding: 1.8rem 2rem;
     margin: 0;
+  }
+
+  .btn:hover {
+    transition: all 0.25s ease-in-out;
+    background-color: var(--light-color1);
   }
 }

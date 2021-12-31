@@ -2,10 +2,13 @@ import styles from "../Styles/Input.module.css";
 
 const Input = (props) => {
   return (
-    <section className={styles["amount-container"]}>
-      <label className={styles["amount-title"]} htmlFor={props.name}>
-        {props.label}
-      </label>
+    <div className={styles["amount-container"]}>
+      <div className={styles["label-container"]}>
+        <label className={styles["amount-title"]} htmlFor={props.id}>
+          {props.label}
+        </label>
+        {!props.valid && <p className={styles["error-label"]}>Cannot be 0</p>}
+      </div>
       <div className={styles["input-container"]}>
         {props.children}
         <input
@@ -13,13 +16,14 @@ const Input = (props) => {
           step={props.step}
           onChange={props.inputHandler}
           name={props.name}
+          id={props.id}
           type="number"
           className={
             props.valid ? styles.input : `${styles.input} ${styles.error}`
           }
         />
       </div>
-    </section>
+    </div>
   );
 };
 

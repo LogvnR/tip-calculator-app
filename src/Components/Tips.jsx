@@ -12,7 +12,7 @@ const Tips = (props) => {
   };
 
   return (
-    <section className={styles.container}>
+    <div className={styles.container}>
       <p>Select Tip %</p>
       <div className={styles["tip-container"]}>
         <Tip
@@ -46,18 +46,21 @@ const Tips = (props) => {
           id="radio5"
         />
         <div onClick={uncheckHandler} className={styles["custom-container"]}>
+          <label className={styles["custom-label"]} htmlFor="custom">
+            Custom Tip
+          </label>
           <input
             min={0}
             step={0.01}
             onChange={props.inputHandler}
-            name="tip-amount"
+            name="custom"
             className={styles.custom}
             type="number"
             placeholder="CUSTOM"
           />
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 

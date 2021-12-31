@@ -6,11 +6,24 @@
   gap: 0.5rem;
 }
 
+.label-container {
+  display: flex;
+  justify-content: space-between;
+}
+
 .amount-title {
   font-family: var(--font);
   font-weight: 700;
   font-size: var(--font-small);
   color: var(--dark-bg);
+}
+
+.error-label {
+  margin: 0;
+  font-family: var(--font);
+  font-weight: 700;
+  font-size: var(--font-small);
+  color: var(--error);
 }
 
 .input-container {

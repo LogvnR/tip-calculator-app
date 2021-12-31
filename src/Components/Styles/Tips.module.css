@@ -49,6 +49,10 @@
   caret-color: var(--main-bg);
 }
 
+.custom-label {
+  display: none;
+}
+
 @media only screen and (min-width: 767px) {
   .tip-container {
     grid-template-columns: repeat(3, 1fr);

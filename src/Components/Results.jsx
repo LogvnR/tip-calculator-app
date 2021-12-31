@@ -2,33 +2,31 @@ import styles from "./Styles/Results.module.css";
 
 const Results = (props) => {
   return (
-    <section className={styles.container}>
-      <section className={styles.result}>
+    <div className={styles.container}>
+      <div className={styles.result}>
         <div className={styles.description}>
-          <h2 className={styles["description-title"]}>Tip Amount</h2>
-          <h4 className={styles["per-person"]}>/ person</h4>
+          <p className={styles["description-title"]}>Tip Amount</p>
+          <p className={styles["per-person"]}>/ person</p>
         </div>
         <div className={styles["amount-container"]}>
-          <h2 className={styles["amount"]}>{`$${props.tipPerPersonAmount}`}</h2>
+          <p className={styles["amount"]}>{`$${props.tipPerPersonAmount}`}</p>
         </div>
-      </section>
-      <section className={styles.result}>
+      </div>
+      <div className={styles.result}>
         <div className={styles.description}>
-          <h2 className={styles["description-title"]}>Total</h2>
-          <h4 className={styles["per-person"]}>/ person</h4>
+          <p className={styles["description-title"]}>Total</p>
+          <p className={styles["per-person"]}>/ person</p>
         </div>
         <div className={styles["amount-container"]}>
-          <h2
-            className={styles["amount"]}
-          >{`$${props.totalPerPersonAmount}`}</h2>
+          <p className={styles["amount"]}>{`$${props.totalPerPersonAmount}`}</p>
         </div>
-      </section>
-      <section className={styles["btn-container"]}>
+      </div>
+      <div className={styles["btn-container"]}>
         <button onClick={props.reset} className={styles.btn}>
           Reset
         </button>
-      </section>
-    </section>
+      </div>
+    </div>
   );
 };
 

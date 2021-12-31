@@ -29,7 +29,7 @@ const MainCard = () => {
   };
 
   useEffect(() => {
-    if (amount > 0.02 || tip > 0 || persons > 1) {
+    if (amount > 0 && tip > 0 && persons >= 1) {
       const tipPercent = tip / 100;
       const tipPerPerson = ((amount * tipPercent) / persons).toFixed(2);
       const tipAmount = amount * tipPercent;
@@ -75,6 +75,7 @@ const MainCard = () => {
         <Input
           valid={amountValid}
           step={0.01}
+          id="amount"
           inputHandler={amountChangeHandler}
           name="amount"
           label="Bill"
@@ -84,6 +85,7 @@ const MainCard = () => {
         <Tips inputHandler={tipChangeHandler} />
         <Input
           step={1}
+          id="persons"
           inputHandler={personsChangeHandler}
           valid={personsValid}
           name="persons"
