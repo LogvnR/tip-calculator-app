@@ -6,9 +6,11 @@ import MainCard from "./Components/MainCard";
 const App = () => {
   return (
     <main className={styles["main-container"]}>
-      <h1>
+      <div className={styles["logo-container"]}>
         <Logo className={styles.logo} />
-      </h1>
+        <h1>Splitter</h1>
+      </div>
+
       <MainCard />
     </main>
   );

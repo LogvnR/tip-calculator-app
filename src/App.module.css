@@ -5,8 +5,17 @@
   align-items: center;
 }
 
+.logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
 h1 {
   margin: 0;
+  position: absolute;
+  color: var(--light-color1);
 }
 
 .logo {
