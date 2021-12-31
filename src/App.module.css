@@ -16,6 +16,7 @@ h1 {
   margin: 0;
   position: absolute;
   color: var(--light-color1);
+  z-index: -10;
 }
 
 .logo {
