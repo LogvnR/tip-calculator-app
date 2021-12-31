@@ -54,6 +54,7 @@ const Tips = (props) => {
             step={0.01}
             onChange={props.inputHandler}
             name="custom"
+            id="custom"
             className={styles.custom}
             type="number"
             placeholder="CUSTOM"
