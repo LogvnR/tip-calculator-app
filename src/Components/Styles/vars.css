@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap");
 
 :root {
   --main-bg: hsl(172, 67%, 45%);
@@ -8,6 +8,9 @@
   --light-color1: hsl(185, 41%, 84%);
   --light-color2: hsl(189, 41%, 97%);
   --white: hsl(0, 0%, 100%);
-  --font: 'Space Mono', monospace;
-  --font-small: 4.5vw;
+  --error: hsl(0, 60%, 61%);
+  --font: "Space Mono", monospace;
+  --font-small: clamp(8px, 3.5vw, 13px);
+  --font-medium: clamp(8px, 4vw, 18px);
+  --font-large: clamp(16px, 5vw, 24px);
 }

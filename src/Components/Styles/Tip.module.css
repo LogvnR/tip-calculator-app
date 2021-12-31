@@ -21,7 +21,7 @@
   border-radius: 0.5rem;
   text-align: center;
   font-family: var(--font);
-  font-size: 5vw;
+  font-size: var(--font-large);
   font-weight: 700;
   color: var(--white);
   background-color: var(--dark-bg);

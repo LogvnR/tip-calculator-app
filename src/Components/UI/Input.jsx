@@ -1,5 +1,3 @@
-import react from "react";
-
 import styles from "../Styles/Input.module.css";
 
 const Input = (props) => {
@@ -11,10 +9,14 @@ const Input = (props) => {
       <div className={styles["input-container"]}>
         {props.children}
         <input
+          min={0}
+          step={props.step}
           onChange={props.inputHandler}
-          dir="rtl"
           name={props.name}
           type="number"
+          className={
+            props.valid ? styles.input : `${styles.input} ${styles.error}`
+          }
         />
       </div>
     </section>

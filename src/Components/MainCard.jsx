@@ -9,11 +9,14 @@ import Tips from "./Tips";
 import Results from "./Results";
 
 const MainCard = () => {
-  const [amount, setAmount] = useState(0);
+  const [amount, setAmount] = useState(0.01);
   const [tip, setTip] = useState(0);
-  const [persons, setPersons] = useState(0);
+  const [persons, setPersons] = useState(1);
   const [tipAmount, setTipAmount] = useState("0.00");
   const [totalAmount, setTotalAmount] = useState("0.00");
+
+  const [amountValid, setAmountValid] = useState(true);
+  const [personsValid, setPersonsValid] = useState(true);
 
   const amountChangeHandler = (e) => {
     setAmount(e.target.value);
@@ -26,7 +29,7 @@ const MainCard = () => {
   };
 
   useEffect(() => {
-    if (amount !== 0 && tip !== 0 && persons !== 0) {
+    if (amount > 0.02 || tip > 0 || persons > 1) {
       const tipPercent = tip / 100;
       const tipPerPerson = ((amount * tipPercent) / persons).toFixed(2);
       const tipAmount = amount * tipPercent;
@@ -41,6 +44,22 @@ const MainCard = () => {
     }
   }, [amount, tip, persons]);
 
+  useEffect(() => {
+    if (amount < 0.01) {
+      setAmountValid(false);
+    } else {
+      setAmountValid(true);
+    }
+  }, [amount]);
+
+  useEffect(() => {
+    if (persons < 1) {
+      setPersonsValid(false);
+    } else {
+      setPersonsValid(true);
+    }
+  }, [persons]);
+
   const resetForm = (e) => {
     e.preventDefault();
     const form = document.querySelector("form");
@@ -52,17 +71,28 @@ const MainCard = () => {
 
   return (
     <form className={styles.main}>
-      <Input inputHandler={amountChangeHandler} name="amount" label="Bill">
-        <Dollar />
-      </Input>
-      <Tips inputHandler={tipChangeHandler} />
-      <Input
-        inputHandler={personsChangeHandler}
-        name="persons"
-        label="Number of People"
-      >
-        <Person />
-      </Input>
+      <div className={styles["input-container"]}>
+        <Input
+          valid={amountValid}
+          step={0.01}
+          inputHandler={amountChangeHandler}
+          name="amount"
+          label="Bill"
+        >
+          <Dollar />
+        </Input>
+        <Tips inputHandler={tipChangeHandler} />
+        <Input
+          step={1}
+          inputHandler={personsChangeHandler}
+          valid={personsValid}
+          name="persons"
+          label="Number of People"
+        >
+          <Person />
+        </Input>
+      </div>
+
       <Results
         reset={resetForm}
         tipPerPersonAmount={tipAmount}

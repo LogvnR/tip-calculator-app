@@ -21,10 +21,28 @@
   align-items: center;
 }
 
-.input-container input {
+.input {
   width: 100%;
-  padding: 0.5rem 0.2rem;
+  padding: 0.5rem 0.7rem 0.5rem 0.2rem;
   box-sizing: border-box;
+  text-align: right;
+  border-radius: 0.5rem;
+  border: 2px solid transparent;
+  background-color: var(--light-color2);
+  font-size: var(--font-large);
+  font-family: var(--font);
+  font-weight: 700;
+  color: var(--dark-bg);
+  letter-spacing: 1px;
+  outline-color: var(--main-bg);
+  caret-color: var(--main-bg);
+}
+
+.error {
+  border: 2px solid var(--error);
+  outline-color: var(--error);
+  color: var(--error);
+  caret-color: var(--error);
 }
 
 .input-container svg {

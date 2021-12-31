@@ -26,13 +26,13 @@
 
 .description-title {
   margin: 0;
-  font-size: var(--font-small);
+  font-size: var(--font-medium);
   color: var(--light-color1);
 }
 
 .per-person {
   margin: 0;
-  font-size: 3.5vw;
+  font-size: var(--font-small);
   color: var(--dark-color2);
 }
 
@@ -44,7 +44,7 @@
 
 .amount {
   margin: 0;
-  font-size: 8vw;
+  font-size: clamp(24px, 8vw, 48px);
   color: var(--main-bg);
 }
 
@@ -62,9 +62,21 @@
   padding: 0.4rem 0;
   border-radius: 0.2rem;
   font-family: var(--font);
-  font-size: 5.5vw;
+  font-size: var(--font-large);
   font-weight: 700;
   text-transform: uppercase;
   color: var(--dark-bg);
   background-color: var(--main-bg);
+}
+
+.btn:hover {
+  transition: all 0.25s ease-in-out;
+  background-color: var(--light-color1);
+}
+
+@media only screen and (min-width: 767px) {
+  .container {
+    justify-content: space-between;
+    padding: 1.8rem 2rem;
+  }
 }

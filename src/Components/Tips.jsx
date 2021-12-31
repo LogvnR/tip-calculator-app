@@ -7,7 +7,7 @@ const Tips = (props) => {
   const uncheckHandler = () => {
     const radio = document.querySelector("input[type=radio]:checked");
     if (radio === null) {
-      console.log("no check");
+      return;
     } else {
       radio.checked = false;
     }
@@ -49,9 +49,10 @@ const Tips = (props) => {
         />
         <div onClick={uncheckHandler} className={styles["custom-container"]}>
           <input
+            min={0}
+            step={0.01}
             onChange={props.inputHandler}
             name="tip-amount"
-            dir="rtl"
             className={styles.custom}
             type="number"
             placeholder="CUSTOM"
