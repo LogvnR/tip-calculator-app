@@ -53,6 +53,17 @@
 
 .input::placeholder {
   color: var(--dark-color2);
+  opacity: 1;
+}
+
+.input:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: var(--dark-color2);
+}
+
+.input::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: var(--dark-color2);
 }
 
 .error {
@@ -63,6 +74,17 @@
 }
 
 .error::placeholder {
+  color: var(--error);
+  opacity: 1;
+}
+
+.error:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: var(--error);
+}
+
+.error::-ms-input-placeholder {
+  /* Microsoft Edge */
   color: var(--error);
 }
 
