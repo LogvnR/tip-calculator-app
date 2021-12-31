@@ -25,7 +25,7 @@ Users should be able to:
 
 ### Links
 
-- Live Site URL: [SPLITTER](https://your-live-site-url.com)
+- Live Site URL: [SPLI|TTER](https://spli-tter-tip-calculator.netlify.app/)
 
 ## My process
 
