@@ -17,6 +17,7 @@ h1 {
   .main-container {
     height: 100vh;
     justify-content: center;
+    gap: 1rem;
   }
 
   .logo {

@@ -15,7 +15,7 @@
   font-family: var(--font);
   font-weight: 700;
   font-size: var(--font-small);
-  color: var(--dark-bg);
+  color: var(--dark-color1);
 }
 
 .error-label {

@@ -10,6 +10,10 @@
   font-family: var(--font);
 }
 
+.result-container {
+  width: 100%;
+}
+
 .result {
   width: 100%;
   margin: 0.9rem 0;
@@ -53,7 +57,7 @@
 
 .btn-container {
   width: 100%;
-  margin: 0.8rem 0;
+  margin: 1.5rem 0;
   display: flex;
   justify-content: center;
   align-items: center;
