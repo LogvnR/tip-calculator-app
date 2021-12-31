@@ -1,5 +1,3 @@
-import react from "react";
-
 import styles from "../Styles/Tip.module.css";
 
 const Tip = (props) => {

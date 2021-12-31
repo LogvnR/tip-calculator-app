@@ -1,5 +1,3 @@
-import react from "react";
-
 import styles from "./Styles/Tips.module.css";
 import Tip from "./UI/Tip";
 
