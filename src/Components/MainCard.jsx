@@ -64,9 +64,9 @@ const MainCard = () => {
     e.preventDefault();
     const form = document.querySelector("form");
     form.reset();
-    setAmount(0);
+    setAmount();
     setTip(0);
-    setPersons(0);
+    setPersons(1);
   };
 
   return (
