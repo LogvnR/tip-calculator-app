@@ -9,7 +9,7 @@ import Tips from "./Tips";
 import Results from "./Results";
 
 const MainCard = () => {
-  const [amount, setAmount] = useState(0.01);
+  const [amount, setAmount] = useState();
   const [tip, setTip] = useState(0);
   const [persons, setPersons] = useState(1);
   const [tipAmount, setTipAmount] = useState("0.00");

@@ -4,7 +4,7 @@ import styles from "./Styles/Results.module.css";
 
 const Results = (props) => {
   return (
-    <div className={styles.container}>
+    <section className={styles.container}>
       <section className={styles.result}>
         <div className={styles.description}>
           <h2 className={styles["description-title"]}>Tip Amount</h2>
@@ -30,7 +30,7 @@ const Results = (props) => {
           Reset
         </button>
       </section>
-    </div>
+    </section>
   );
 };
 

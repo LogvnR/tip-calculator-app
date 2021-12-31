@@ -1,5 +1,5 @@
 .container {
-  margin: 1rem 0;
+  margin: 2rem 0;
 }
 
 .container p {
@@ -37,6 +37,7 @@
   padding: 0.5rem 0.8rem;
   border-radius: 0.5rem;
   border: none;
+  transition: all 0.25s ease-in-out;
   background-color: var(--light-color2);
   text-align: right;
   font-size: var(--font-large);

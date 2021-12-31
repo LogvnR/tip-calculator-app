@@ -10,6 +10,7 @@
 }
 
 .radio:checked + .tip-amount {
+  transition: all 0.25s ease-in-out;
   background-color: var(--main-bg);
   color: var(--dark-bg);
 }
@@ -25,4 +26,12 @@
   font-weight: 700;
   color: var(--white);
   background-color: var(--dark-bg);
+}
+
+@media only screen and (min-width: 767px) {
+  .tip-amount:hover {
+    transition: all 0.25s ease-in-out;
+    background-color: var(--light-color1);
+    color: var(--dark-bg);
+  }
 }
