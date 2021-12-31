@@ -8,6 +8,7 @@
   font-size: var(--font-small);
   color: var(--dark-bg);
   font-weight: 700;
+  cursor: alias;
 }
 
 .tip-container {
@@ -53,7 +54,7 @@
   display: none;
 }
 
-@media only screen and (min-width: 767px) {
+@media only screen and (min-width: 769px) {
   .tip-container {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 1fr);

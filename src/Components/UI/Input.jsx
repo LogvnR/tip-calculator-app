@@ -18,6 +18,9 @@ const Input = (props) => {
           name={props.name}
           id={props.id}
           type="number"
+          placeholder={props.placeholder}
+          onFocus={(e) => (e.target.placeholder = "")}
+          onBlur={(e) => (e.target.placeholder = props.placeholder)}
           className={
             props.valid ? styles.input : `${styles.input} ${styles.error}`
           }

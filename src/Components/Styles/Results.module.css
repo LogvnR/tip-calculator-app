@@ -15,6 +15,7 @@
   margin: 0.9rem 0;
   display: flex;
   justify-content: space-between;
+  cursor: alias;
 }
 
 .description {
@@ -69,6 +70,8 @@
   text-transform: uppercase;
   color: var(--dark-bg);
   background-color: var(--main-bg);
+  transition: all 0.25s ease-in-out;
+  cursor: pointer;
 }
 
 .btn:active {
@@ -76,7 +79,14 @@
   background-color: var(--light-color1);
 }
 
-@media only screen and (min-width: 767px) {
+.disabled {
+  transition: all 0.25s ease-in-out;
+  background-color: hsl(183, 79%, 24%);
+  color: hsl(183, 100%, 15%);
+  cursor: alias;
+}
+
+@media only screen and (min-width: 769px) {
   .container {
     justify-content: space-between;
     padding: 1.8rem 2rem;
@@ -86,5 +96,11 @@
   .btn:hover {
     transition: all 0.25s ease-in-out;
     background-color: var(--light-color1);
+  }
+
+  .disabled:hover {
+    transition: all 0.25s ease-in-out;
+    background-color: hsl(183, 79%, 24%);
+    color: hsl(183, 100%, 15%);
   }
 }

@@ -51,11 +51,19 @@
   caret-color: var(--main-bg);
 }
 
+.input::placeholder {
+  color: var(--dark-color2);
+}
+
 .error {
   border: 2px solid var(--error);
   outline-color: var(--error);
   color: var(--error);
   caret-color: var(--error);
+}
+
+.error::placeholder {
+  color: var(--error);
 }
 
 .input-container svg {

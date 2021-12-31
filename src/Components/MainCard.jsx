@@ -17,6 +17,7 @@ const MainCard = () => {
 
   const [amountValid, setAmountValid] = useState(true);
   const [personsValid, setPersonsValid] = useState(true);
+  const [btnActive, setBtnActive] = useState(false);
 
   const amountChangeHandler = (e) => {
     setAmount(e.target.value);
@@ -38,9 +39,11 @@ const MainCard = () => {
       );
       setTipAmount(tipPerPerson);
       setTotalAmount(amountPerPerson);
+      setBtnActive(true);
     } else {
       setTipAmount("0.00");
       setTotalAmount("0.00");
+      setBtnActive(false);
     }
   }, [amount, tip, persons]);
 
@@ -79,6 +82,7 @@ const MainCard = () => {
           inputHandler={amountChangeHandler}
           name="amount"
           label="Bill"
+          placeholder="0"
         >
           <Dollar />
         </Input>
@@ -90,6 +94,7 @@ const MainCard = () => {
           valid={personsValid}
           name="persons"
           label="Number of People"
+          placeholder="1"
         >
           <Person />
         </Input>
@@ -99,6 +104,7 @@ const MainCard = () => {
         reset={resetForm}
         tipPerPersonAmount={tipAmount}
         totalPerPersonAmount={totalAmount}
+        btnActive={btnActive}
       />
     </form>
   );

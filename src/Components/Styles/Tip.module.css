@@ -26,9 +26,10 @@
   font-weight: 700;
   color: var(--white);
   background-color: var(--dark-bg);
+  cursor: pointer;
 }
 
-@media only screen and (min-width: 767px) {
+@media only screen and (min-width: 769px) {
   .tip-amount:hover {
     transition: all 0.25s ease-in-out;
     background-color: var(--light-color1);

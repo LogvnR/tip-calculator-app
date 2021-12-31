@@ -5,13 +5,22 @@
   align-items: center;
 }
 
-.logo {
-  margin: 2.5rem;
+h1 {
+  display: none;
 }
 
-@media only screen and (min-width: 767px) {
+.logo {
+  margin: 3rem;
+}
+
+@media only screen and (min-width: 769px) {
+  .main-container {
+    height: 100vh;
+    justify-content: center;
+  }
+
   .logo {
     font-size: var(--font-medium);
-    margin: 3em 2.5em 5em;
+    margin: 1em 2.5em 3em;
   }
 }

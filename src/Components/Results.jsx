@@ -22,7 +22,13 @@ const Results = (props) => {
         </div>
       </div>
       <div className={styles["btn-container"]}>
-        <button onClick={props.reset} className={styles.btn}>
+        <button
+          disabled={!props.btnActive}
+          onClick={props.reset}
+          className={
+            props.btnActive ? styles.btn : `${styles.btn} ${styles.disabled}`
+          }
+        >
           Reset
         </button>
       </div>

@@ -35,14 +35,14 @@ const Tips = (props) => {
         />
         <Tip
           inputHandler={props.inputHandler}
-          value={20}
-          amount="20%"
+          value={25}
+          amount="25%"
           id="radio4"
         />
         <Tip
           inputHandler={props.inputHandler}
-          value={25}
-          amount="25%"
+          value={50}
+          amount="50%"
           id="radio5"
         />
         <div onClick={uncheckHandler} className={styles["custom-container"]}>
